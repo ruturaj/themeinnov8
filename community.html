@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Library - Share Books, Build Community</title>
+    <meta name="description" content="Community Library app helps neighbors share books, build reading habits, and create stronger communities. Free to use!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4CAF50;
+            --primary-dark: #388E3C;
+            --primary-light: #C8E6C9;
+            --secondary: #FF9800;
+            --accent: #2196F3;
+            --text-primary: #212121;
+            --text-secondary: #757575;
+            --background: #FAFAFA;
+            --white: #FFFFFF;
+            --gradient-start: #4CAF50;
+            --gradient-end: #81C784;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: var(--background);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            padding: 1rem 2rem;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            font-size: 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            padding: 6rem 2rem 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-text h1 span {
+            color: #FFE082;
+        }
+
+        .hero-text p {
+            font-size: 1.25rem;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 2rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--white);
+            color: var(--primary);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+        }
+
+        .phone-mockup {
+            background: var(--white);
+            border-radius: 40px;
+            padding: 1rem;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+            max-width: 300px;
+            transform: rotate(5deg);
+        }
+
+        .phone-screen {
+            background: linear-gradient(180deg, #E8F5E9 0%, #FFFFFF 100%);
+            border-radius: 30px;
+            padding: 2rem 1.5rem;
+            min-height: 500px;
+        }
+
+        .phone-header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .phone-header h3 {
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        .book-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .book-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 0.75rem;
+            display: flex;
+            gap: 0.75rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .book-cover {
+            width: 50px;
+            height: 70px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .book-info h4 {
+            font-size: 0.85rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .book-info p {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+        }
+
+        .book-status {
+            font-size: 0.65rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 0.25rem;
+        }
+
+        .status-available {
+            background: #E8F5E9;
+            color: var(--primary);
+        }
+
+        .status-borrowed {
+            background: #FFF3E0;
+            color: #F57C00;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 6rem 2rem;
+            background: var(--white);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+        }
+
+        .features-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--background);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin: 0 auto 1.5rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+        }
+
+        /* How It Works */
+        .how-it-works {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #E3F2FD 0%, #E8F5E9 100%);
+        }
+
+        .steps {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: var(--white);
+            font-size: 1.5rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+        }
+
+        .step h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .step p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Community Impact */
+        .impact {
+            padding: 6rem 2rem;
+            background: var(--white);
+        }
+
+        .impact-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .impact-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--white) 100%);
+            border-radius: 20px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .stat-card .emoji {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-card h4 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .stat-card p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .impact-text h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+        }
+
+        .impact-text p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .impact-list {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .impact-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .impact-list li::before {
+            content: '✓';
+            background: var(--primary);
+            color: var(--white);
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .cta p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .store-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .store-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: var(--white);
+            color: var(--text-primary);
+            padding: 0.75rem 1.5rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s;
+        }
+
+        .store-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .store-btn .store-icon {
+            font-size: 2rem;
+        }
+
+        .store-btn span {
+            text-align: left;
+        }
+
+        .store-btn .small {
+            font-size: 0.7rem;
+            font-weight: 400;
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background: #263238;
+            color: var(--white);
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .footer-brand h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-brand p {
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: background 0.3s;
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+        }
+
+        .footer-links h4 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-light);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 3rem auto 0;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-bottom p {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .phone-mockup {
+                transform: none;
+                max-width: 250px;
+            }
+
+            .impact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <span class="logo-icon">📚</span>
+                Community Library
+            </a>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#impact">Community</a></li>
+                <li><a href="community-privacy-policy.html">Privacy</a></li>
+                <li><a href="community-terms-of-service.html">Terms</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Share Books, <span>Build Community</span> 📖</h1>
+                <p>Turn your neighborhood into a thriving library! Share books with neighbors, discover new reads, and build a community of book lovers - one book at a time.</p>
+                <div class="hero-buttons">
+                    <a href="#download" class="btn btn-primary">
+                        📱 Get the App
+                    </a>
+                    <a href="#how-it-works" class="btn btn-secondary">
+                        Learn More →
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <div class="phone-header">
+                            <h3>📚 My Library</h3>
+                        </div>
+                        <div class="book-cards">
+                            <div class="book-card">
+                                <div class="book-cover" style="background: #FFE082;">📗</div>
+                                <div class="book-info">
+                                    <h4>Harry Potter</h4>
+                                    <p>J.K. Rowling</p>
+                                    <span class="book-status status-available">Available</span>
+                                </div>
+                            </div>
+                            <div class="book-card">
+                                <div class="book-cover" style="background: #90CAF9;">📘</div>
+                                <div class="book-info">
+                                    <h4>The Hobbit</h4>
+                                    <p>J.R.R. Tolkien</p>
+                                    <span class="book-status status-borrowed">Borrowed</span>
+                                </div>
+                            </div>
+                            <div class="book-card">
+                                <div class="book-cover" style="background: #CE93D8;">📕</div>
+                                <div class="book-info">
+                                    <h4>Percy Jackson</h4>
+                                    <p>Rick Riordan</p>
+                                    <span class="book-status status-available">Available</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="section-header">
+            <h2>Why You'll Love It ❤️</h2>
+            <p>Everything you need to share books with your community, all in one simple app!</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon" style="background: #E8F5E9;">📱</div>
+                <h3>Scan & Add Books</h3>
+                <p>Simply scan the book cover or ISBN with your camera. Our AI magic does the rest!</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon" style="background: #E3F2FD;">🏘️</div>
+                <h3>Join Your Community</h3>
+                <p>Connect with your apartment complex, neighborhood, or local book club.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon" style="background: #FFF3E0;">🔄</div>
+                <h3>Borrow & Lend</h3>
+                <p>Request books from neighbors or share yours. Track everything easily!</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon" style="background: #F3E5F5;">💾</div>
+                <h3>Save for Later</h3>
+                <p>Found a book you want to read? Save it and get notified when it's available.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon" style="background: #FFEBEE;">🔔</div>
+                <h3>Smart Notifications</h3>
+                <p>Know when your requested book is ready or when someone wants to borrow yours.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon" style="background: #E0F2F1;">📊</div>
+                <h3>Community Stats</h3>
+                <p>See how many books your community has shared and the impact you've made together!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="section-header">
+            <h2>Super Easy to Use! 🚀</h2>
+            <p>Get started in just 4 simple steps</p>
+        </div>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Download App</h3>
+                <p>Get the free app from Play Store</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Join Library</h3>
+                <p>Find or create your community library</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Add Your Books</h3>
+                <p>Scan and add books you want to share</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Start Sharing!</h3>
+                <p>Borrow books and make new friends</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Impact -->
+    <section class="impact" id="impact">
+        <div class="impact-content">
+            <div class="impact-stats">
+                <div class="stat-card">
+                    <div class="emoji">📚</div>
+                    <h4>1000+</h4>
+                    <p>Books Shared</p>
+                </div>
+                <div class="stat-card">
+                    <div class="emoji">👥</div>
+                    <h4>500+</h4>
+                    <p>Happy Readers</p>
+                </div>
+                <div class="stat-card">
+                    <div class="emoji">🏘️</div>
+                    <h4>50+</h4>
+                    <p>Communities</p>
+                </div>
+                <div class="stat-card">
+                    <div class="emoji">🌱</div>
+                    <h4>∞</h4>
+                    <p>Stories to Tell</p>
+                </div>
+            </div>
+            <div class="impact-text">
+                <h2>Building Reading Communities 🌟</h2>
+                <p>Every book shared is a story that travels, a connection made, and a community strengthened. We believe that books shouldn't sit on shelves collecting dust – they should be read, loved, and passed on.</p>
+                <p>Community Library makes it easy for families, kids, and adults to discover new books right in their neighborhood without spending a penny!</p>
+                <ul class="impact-list">
+                    <li>Build lifelong reading habits in children</li>
+                    <li>Save money while reading more books</li>
+                    <li>Meet neighbors who share your interests</li>
+                    <li>Reduce waste by sharing instead of buying</li>
+                    <li>Create a culture of generosity</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="download">
+        <h2>Ready to Start Sharing? 🎉</h2>
+        <p>Download Community Library today and turn your bookshelf into a community resource!</p>
+        <div class="store-buttons">
+            <a href="#" class="store-btn">
+                <span class="store-icon">▶️</span>
+                <span>
+                    <span class="small">GET IT ON</span>
+                    Google Play
+                </span>
+            </a>
+            <a href="#" class="store-btn" style="opacity: 0.6;">
+                <span class="store-icon">🍎</span>
+                <span>
+                    <span class="small">COMING SOON</span>
+                    App Store
+                </span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>📚 Community Library</h3>
+                <p>Share books, build community, spread the joy of reading one book at a time.</p>
+                <div class="social-links">
+                    <a href="#" title="Twitter">🐦</a>
+                    <a href="#" title="Instagram">📷</a>
+                    <a href="#" title="Facebook">👤</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>App</h4>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#download">Download</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="community-privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="community-terms-of-service.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="mailto:support@communitylib.app">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Help Center</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Community Library. Made with ❤️ for book lovers everywhere.</p>
+            <p>Version 0.1.0</p>
+        </div>
+    </footer>
+</body>
+</html>
