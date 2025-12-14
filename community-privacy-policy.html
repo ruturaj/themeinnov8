@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Community Library</title>
+    <meta name="description" content="Privacy Policy for Community Library app. Learn how we collect, use, and protect your personal information.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4CAF50;
+            --primary-dark: #388E3C;
+            --text-primary: #212121;
+            --text-secondary: #757575;
+            --background: #FAFAFA;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: var(--background);
+            color: var(--text-primary);
+            line-height: 1.8;
+        }
+
+        nav {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .back-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .content h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .content h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 1.5rem 0 0.75rem;
+            color: var(--text-primary);
+        }
+
+        .content p {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .content ul, .content ol {
+            margin: 1rem 0 1rem 2rem;
+            color: var(--text-secondary);
+        }
+
+        .content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box {
+            background: #E8F5E9;
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight-box h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #E0E0E0;
+        }
+
+        th {
+            background: var(--primary);
+            color: var(--white);
+            font-weight: 700;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover {
+            background: #F5F5F5;
+        }
+
+        .contact-box {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .contact-box h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .contact-box a {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        footer {
+            background: #263238;
+            color: var(--white);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer p {
+            opacity: 0.7;
+        }
+
+        footer a {
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+
+            .content {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="community.html" class="logo">
+                📚 Community Library
+            </a>
+            <a href="community.html" class="back-link">
+                ← Back to Home
+            </a>
+        </div>
+    </nav>
+
+    <header class="header">
+        <h1>🔒 Privacy Policy</h1>
+        <p>Last Updated: December 14, 2025</p>
+    </header>
+
+    <main class="content">
+        <div class="highlight-box">
+            <h4>📋 Quick Summary</h4>
+            <p>We collect only what's necessary to help you share books with your community. We don't sell your data, and you're always in control of your information. Read below for the full details!</p>
+        </div>
+
+        <h2>1. Introduction</h2>
+        <p>Welcome to Community Library ("we," "our," or "us"). We are committed to protecting your privacy and ensuring transparency about how we collect, use, and safeguard your personal information.</p>
+        <p>This Privacy Policy explains how we handle your data when you use our mobile application ("App") and related services. By using Community Library, you agree to the collection and use of information in accordance with this policy.</p>
+
+        <h2>2. Information We Collect</h2>
+        
+        <h3>2.1 Information You Provide</h3>
+        <p>When you create an account and use our services, we collect:</p>
+        <ul>
+            <li><strong>Account Information:</strong> Name, email address, and password when you register</li>
+            <li><strong>Profile Information:</strong> Optional profile picture and display name</li>
+            <li><strong>Book Data:</strong> Information about books you add, including titles, authors, ISBNs, and cover images</li>
+            <li><strong>Community Information:</strong> The libraries/communities you join and your membership status</li>
+            <li><strong>Transaction Data:</strong> Records of books you borrow, lend, request, or save</li>
+        </ul>
+
+        <h3>2.2 Information Collected Automatically</h3>
+        <p>When you use our App, we automatically collect:</p>
+        <ul>
+            <li><strong>Device Information:</strong> Device type, operating system version, unique device identifiers</li>
+            <li><strong>Usage Data:</strong> Features you use, actions you take, time and duration of activities</li>
+            <li><strong>Log Data:</strong> IP address, app crashes, and error reports</li>
+        </ul>
+
+        <h3>2.3 Location Information</h3>
+        <p>With your permission, we collect:</p>
+        <ul>
+            <li><strong>Approximate Location:</strong> To show nearby community libraries and help you find local book-sharing communities</li>
+        </ul>
+        <p>You can disable location access at any time through your device settings.</p>
+
+        <h3>2.4 Camera and Photos</h3>
+        <p>With your permission, we access:</p>
+        <ul>
+            <li><strong>Camera:</strong> To scan book covers and ISBNs for easy book addition</li>
+            <li><strong>Photo Library:</strong> To allow you to upload book cover images</li>
+        </ul>
+
+        <h2>3. How We Use Your Information</h2>
+        
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>Purpose</th>
+                    <th>Data Used</th>
+                </tr>
+                <tr>
+                    <td>Create and manage your account</td>
+                    <td>Email, name, password</td>
+                </tr>
+                <tr>
+                    <td>Enable book sharing and borrowing</td>
+                    <td>Book data, transaction records</td>
+                </tr>
+                <tr>
+                    <td>Connect you with communities</td>
+                    <td>Location, community membership</td>
+                </tr>
+                <tr>
+                    <td>Send notifications about requests and returns</td>
+                    <td>Contact info, transaction data</td>
+                </tr>
+                <tr>
+                    <td>Improve our services</td>
+                    <td>Usage data, crash reports</td>
+                </tr>
+                <tr>
+                    <td>Provide customer support</td>
+                    <td>Account info, usage data</td>
+                </tr>
+            </table>
+        </div>
+
+        <h2>4. Information Sharing</h2>
+        
+        <h3>4.1 With Other Users</h3>
+        <p>When you participate in a community library, other members can see:</p>
+        <ul>
+            <li>Your display name and profile picture</li>
+            <li>Books you've made available for sharing</li>
+            <li>Your borrowing and lending activity within the community</li>
+        </ul>
+
+        <h3>4.2 With Service Providers</h3>
+        <p>We share data with trusted third parties who help us operate our services:</p>
+        <ul>
+            <li><strong>Firebase (Google):</strong> Authentication, database, and cloud functions</li>
+            <li><strong>Google Cloud:</strong> Data storage and processing</li>
+            <li><strong>Analytics Services:</strong> To understand app usage (anonymized data only)</li>
+        </ul>
+
+        <h3>4.3 We Do NOT</h3>
+        <div class="highlight-box">
+            <ul>
+                <li>❌ Sell your personal information to third parties</li>
+                <li>❌ Share your email address with other users</li>
+                <li>❌ Use your data for targeted advertising</li>
+                <li>❌ Share your precise location with anyone</li>
+            </ul>
+        </div>
+
+        <h2>5. Data Security</h2>
+        <p>We implement industry-standard security measures to protect your data:</p>
+        <ul>
+            <li>Encryption of data in transit (HTTPS/TLS)</li>
+            <li>Encryption of sensitive data at rest</li>
+            <li>Secure authentication through Firebase Auth</li>
+            <li>Regular security audits and updates</li>
+            <li>Access controls limiting who can access user data</li>
+        </ul>
+        <p>While we strive to protect your information, no method of transmission over the internet is 100% secure. We cannot guarantee absolute security.</p>
+
+        <h2>6. Data Retention</h2>
+        <p>We retain your information for as long as your account is active or as needed to provide services. Specifically:</p>
+        <ul>
+            <li><strong>Account Data:</strong> Until you delete your account</li>
+            <li><strong>Transaction History:</strong> 3 years after the transaction for dispute resolution</li>
+            <li><strong>Usage Analytics:</strong> Aggregated and anonymized, retained indefinitely</li>
+        </ul>
+        <p>When you delete your account, we will delete or anonymize your personal data within 30 days, except where we need to retain it for legal compliance.</p>
+
+        <h2>7. Your Rights and Choices</h2>
+        <p>You have the following rights regarding your data:</p>
+        
+        <h3>7.1 Access and Portability</h3>
+        <p>You can request a copy of your personal data at any time through the app settings or by contacting us.</p>
+
+        <h3>7.2 Correction</h3>
+        <p>You can update your profile information directly in the app.</p>
+
+        <h3>7.3 Deletion</h3>
+        <p>You can delete your account at any time. This will remove your personal data from our systems.</p>
+
+        <h3>7.4 Opt-Out</h3>
+        <p>You can opt out of:</p>
+        <ul>
+            <li>Push notifications (via device settings)</li>
+            <li>Email communications (via unsubscribe link)</li>
+            <li>Location tracking (via device settings)</li>
+        </ul>
+
+        <h2>8. Children's Privacy</h2>
+        <p>Community Library is designed to be family-friendly. However:</p>
+        <ul>
+            <li>Users must be 13 years or older to create an account</li>
+            <li>Users between 13-18 should have parental consent</li>
+            <li>We do not knowingly collect data from children under 13</li>
+            <li>If we discover we've collected data from a child under 13, we will delete it immediately</li>
+        </ul>
+        <p>Parents or guardians who believe their child has provided us with personal information should contact us immediately.</p>
+
+        <h2>9. International Data Transfers</h2>
+        <p>Your data may be processed in countries other than your own, including the United States where our service providers (like Google/Firebase) operate. We ensure appropriate safeguards are in place for such transfers.</p>
+
+        <h2>10. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. We will notify you of significant changes by:</p>
+        <ul>
+            <li>Posting a notice in the app</li>
+            <li>Sending an email to your registered address</li>
+            <li>Updating the "Last Updated" date at the top of this page</li>
+        </ul>
+        <p>Your continued use of the app after changes constitutes acceptance of the updated policy.</p>
+
+        <h2>11. Third-Party Services</h2>
+        <p>Our app integrates with the following third-party services, each with their own privacy policies:</p>
+        <ul>
+            <li><strong>Google Firebase:</strong> <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a></li>
+            <li><strong>Google Sign-In:</strong> <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
+        </ul>
+
+        <h2>12. California Privacy Rights (CCPA)</h2>
+        <p>If you are a California resident, you have additional rights under the California Consumer Privacy Act (CCPA):</p>
+        <ul>
+            <li>Right to know what personal information we collect</li>
+            <li>Right to delete your personal information</li>
+            <li>Right to opt-out of sale of personal information (we do not sell data)</li>
+            <li>Right to non-discrimination for exercising your rights</li>
+        </ul>
+
+        <h2>13. European Privacy Rights (GDPR)</h2>
+        <p>If you are in the European Economic Area (EEA), you have additional rights under GDPR:</p>
+        <ul>
+            <li>Right to access your data</li>
+            <li>Right to rectification</li>
+            <li>Right to erasure ("right to be forgotten")</li>
+            <li>Right to restrict processing</li>
+            <li>Right to data portability</li>
+            <li>Right to object to processing</li>
+        </ul>
+        <p>Our legal basis for processing your data is your consent and the performance of our contract with you.</p>
+
+        <div class="contact-box">
+            <h3>📬 Contact Us</h3>
+            <p>If you have any questions about this Privacy Policy or your data, please contact us:</p>
+            <p><strong>Email:</strong> <a href="mailto:privacy@communitylib.app">privacy@communitylib.app</a></p>
+            <p><strong>App:</strong> Settings → Help → Contact Support</p>
+        </div>
+
+        <h2>14. Data Protection Officer</h2>
+        <p>For privacy-related inquiries, you can reach our Data Protection Officer at:</p>
+        <p><strong>Email:</strong> <a href="mailto:dpo@communitylib.app">dpo@communitylib.app</a></p>
+
+    </main>
+
+    <footer>
+        <p>© 2025 Community Library | <a href="community.html">Home</a> | <a href="community-terms-of-service.html">Terms of Service</a></p>
+    </footer>
+</body>
+</html>
