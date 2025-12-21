@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Deletion - Community Library</title>
+    <meta name="description" content="How to request account deletion for Community Library app. Learn what data is deleted, what is retained, and submit your deletion request.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4CAF50;
+            --primary-dark: #388E3C;
+            --text-primary: #212121;
+            --text-secondary: #757575;
+            --background: #FAFAFA;
+            --white: #FFFFFF;
+        }
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: var(--background);
+            color: var(--text-primary);
+            line-height: 1.8;
+        }
+        nav {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .back-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+        .header p {
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        .content h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary);
+        }
+        .content h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 1.5rem 0 0.75rem;
+            color: var(--text-primary);
+        }
+        .content p {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+        .steps {
+            background: #E8F5E9;
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .steps ol {
+            margin-left: 1.5rem;
+        }
+        .steps li {
+            margin-bottom: 0.75rem;
+        }
+        .data-table {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #E0E0E0;
+        }
+        th {
+            background: var(--primary);
+            color: var(--white);
+            font-weight: 700;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        tr:hover {
+            background: #F5F5F5;
+        }
+        .form-section {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .form-section h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        .form-section a {
+            color: var(--primary);
+            font-weight: 700;
+        }
+        footer {
+            background: #263238;
+            color: var(--white);
+            padding: 2rem;
+            text-align: center;
+        }
+        footer p {
+            opacity: 0.7;
+        }
+        footer a {
+            color: var(--white);
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            .content {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="community.html" class="logo">
+                📚 Community Library
+            </a>
+            <a href="community.html" class="back-link">
+                ← Back to Home
+            </a>
+        </div>
+    </nav>
+
+    <header class="header">
+        <h1>🗑️ Account Deletion Request</h1>
+        <p>How to request deletion of your Community Library account and data</p>
+    </header>
+
+    <main class="content">
+        <section class="steps">
+            <h2>How to Request Account Deletion</h2>
+            <ol>
+                <li>Open the Community Library app and go to <strong>Profile &gt; Settings &gt; Delete Account</strong>.</li>
+                <li>Follow the on-screen instructions to confirm your request.</li>
+                <li>If you cannot access the app, you can submit a request using the form at the bottom of this page.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>What Happens When You Delete Your Account?</h2>
+            <div class="data-table">
+                <table>
+                    <tr>
+                        <th>Data Type</th>
+                        <th>Deleted?</th>
+                        <th>Retention Period</th>
+                    </tr>
+                    <tr>
+                        <td>Account Information (name, email, password)</td>
+                        <td>Yes</td>
+                        <td>Deleted within 30 days</td>
+                    </tr>
+                    <tr>
+                        <td>Profile Information (profile picture, display name)</td>
+                        <td>Yes</td>
+                        <td>Deleted within 30 days</td>
+                    </tr>
+                    <tr>
+                        <td>Book Data (books you added)</td>
+                        <td>Yes</td>
+                        <td>Deleted within 30 days</td>
+                    </tr>
+                    <tr>
+                        <td>Community Memberships</td>
+                        <td>Yes</td>
+                        <td>Deleted within 30 days</td>
+                    </tr>
+                    <tr>
+                        <td>Transaction Data (borrowing/lending history)</td>
+                        <td>Yes</td>
+                        <td>Retained for 3 years for dispute resolution</td>
+                    </tr>
+                    <tr>
+                        <td>Usage Analytics (anonymized)</td>
+                        <td>No (anonymized and retained)</td>
+                        <td>Indefinitely</td>
+                    </tr>
+                </table>
+            </div>
+            <p><strong>Note:</strong> Some data may be retained for legal or security reasons as required by law.</p>
+        </section>
+
+        <section>
+            <h2>Who Can Request Deletion?</h2>
+            <p>Only the account owner can request deletion. If you are a parent or guardian and believe your child has created an account, please contact us at <a href="mailto:privacy@communitylib.app">privacy@communitylib.app</a>.</p>
+        </section>
+
+        <section>
+            <h2>Developer Name</h2>
+            <p>This app is published by <strong>ThemeInnov8</strong> (as shown on the Google Play Store listing).</p>
+        </section>
+
+        <section class="form-section">
+            <h3>Submit Account Deletion Request</h3>
+            <p>If you cannot access the app, you can request deletion by submitting your username or email below. We will process your request within 30 days.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdAccountDeleteFormLink" target="_blank" rel="noopener">Open Account Deletion Form</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Community Library | <a href="community.html">Home</a> | <a href="community-privacy-policy.html">Privacy Policy</a> | <a href="community-terms-of-service.html">Terms of Service</a></p>
+    </footer>
+</body>
+</html>
