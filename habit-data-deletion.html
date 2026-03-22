@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Deletion — Buddy WhatsApp AI Habit Coach</title>
+  <meta name="description" content="Request deletion of your Buddy habit data. Text DELETE MY DATA to Buddy or send an email request." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="habit-style.css" />
+  <style>
+    /* Deletion-page-specific overrides */
+    .deletion-hero {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 70%, #0d3b2e 100%);
+      padding: 5rem 2rem 4rem; text-align: center;
+    }
+    .deletion-hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); color: #fff; margin-bottom: 0.75rem; }
+    .deletion-hero .subtitle { color: rgba(255,255,255,0.65); font-size: 1rem; max-width: 560px; margin: 0 auto; }
+    .deletion-hero .updated { color: #25D366; font-size: 0.85rem; font-weight: 600; margin-top: 0.5rem; }
+
+    .deletion-body { max-width: 860px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+
+    .deletion-options { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2rem 0 3rem; }
+    .deletion-card {
+      background: #fff; border-radius: 15px; padding: 2rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.10); border: 2px solid #e0e0e0;
+    }
+    .deletion-card.primary { border-color: #25D366; }
+    .deletion-card .badge {
+      display: inline-block; background: rgba(37,211,102,0.12); color: #128C7E;
+      font-size: 0.78rem; font-weight: 600; padding: 0.2rem 0.7rem;
+      border-radius: 10px; margin-bottom: 1rem;
+    }
+    .deletion-card h3 { font-size: 1.15rem; margin-bottom: 0.75rem; }
+    .deletion-card .instructions {
+      background: #f8f9fa; border-radius: 10px; padding: 1rem 1.25rem;
+      font-size: 0.93rem; margin: 1rem 0; border-left: 3px solid #25D366;
+      font-family: 'Inter', sans-serif;
+    }
+    .deletion-card .instructions strong { display: block; font-size: 1rem; margin-bottom: 0.4rem; color: #1a1a2e; }
+    .deletion-card ul { padding: 0; margin: 1rem 0; list-style: none; }
+    .deletion-card ul li { font-size: 0.93rem; margin-bottom: 0.4rem; color: #444; padding-left: 1.4rem; position: relative; }
+    .deletion-card ul li::before { content: '✓'; color: #25D366; font-weight: 700; position: absolute; left: 0; }
+    .deletion-card .card-btn {
+      display: block; width: 100%; text-align: center;
+      background: #25D366; color: #fff; padding: 0.8rem 1.5rem;
+      border-radius: 25px; font-weight: 700; font-size: 0.95rem;
+      transition: background 0.2s, transform 0.15s;
+      margin-top: 1.25rem;
+    }
+    .deletion-card .card-btn:hover { background: #128C7E; transform: translateY(-2px); text-decoration: none; }
+    .deletion-card .card-btn.outline {
+      background: transparent; color: #25D366; border: 2px solid #25D366;
+    }
+    .deletion-card .card-btn.outline:hover { background: #25D366; color: #fff; }
+
+    .section-h2 { font-family: 'Poppins', sans-serif; font-size: 1.4rem; font-weight: 700; margin: 3rem 0 1rem; color: #1a1a2e; padding-bottom: 0.4rem; border-bottom: 2px solid #e8faf0; }
+
+    .data-table { width: 100%; border-collapse: collapse; margin: 1rem 0 2rem; font-size: 0.93rem; }
+    .data-table th { background: #1a1a2e; color: #fff; text-align: left; padding: 0.75rem 1rem; }
+    .data-table td { padding: 0.75rem 1rem; border-bottom: 1px solid #eee; vertical-align: top; }
+    .data-table tr:last-child td { border-bottom: none; }
+    .data-table tr:nth-child(even) td { background: #f8f9fa; }
+    .check { color: #25D366; font-weight: 700; }
+    .no { color: #6c757d; }
+
+    .reassurance { background: #e8faf0; border: 1px solid #b2dfc4; border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .reassurance p { margin: 0.3rem 0; font-size: 0.95rem; }
+    .reassurance strong { color: #128C7E; }
+
+    .faq-grid { display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem; }
+    .faq-item { background: #fff; border-radius: 10px; padding: 1.25rem 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border: 1px solid #eee; }
+    .faq-item h4 { font-size: 1rem; margin-bottom: 0.4rem; color: #1a1a2e; }
+    .faq-item p { color: #6c757d; font-size: 0.93rem; margin: 0; }
+
+    .contact-final { background: #f8f9fa; border-radius: 15px; padding: 1.5rem 2rem; margin-top: 2.5rem; border: 1px solid #e0e0e0; }
+    .contact-final h3 { margin-bottom: 0.75rem; }
+    .contact-final p { margin: 0.25rem 0; font-size: 0.95rem; }
+
+    @media (max-width: 640px) {
+      .deletion-options { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="nav" id="nav">
+  <a href="habit-index.html" class="nav-logo">🤖 <span>Buddy</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="habit-index.html#features">Features</a></li>
+    <li><a href="habit-index.html#how-it-works">How It Works</a></li>
+    <li><a href="habit-privacy-policy.html">Privacy</a></li>
+    <li><a href="habit-terms-of-service.html">Terms</a></li>
+    <li><a href="habit-data-deletion.html" class="active">Data Deletion</a></li>
+    <li><a href="https://wa.me/YOUR_WHATSAPP_NUMBER" class="nav-cta" target="_blank" rel="noopener">Start on WhatsApp</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ===== HERO ===== -->
+<div class="deletion-hero">
+  <h1>🗑️ Request Your Data Deletion</h1>
+  <p class="subtitle">You have full control over your data. Here's how to delete everything Buddy knows about you — instantly.</p>
+</div>
+
+<!-- ===== BODY ===== -->
+<main class="deletion-body">
+
+  <!-- Options -->
+  <h2 class="section-h2">Choose Your Deletion Method</h2>
+
+  <div class="deletion-options">
+
+    <!-- Option 1: WhatsApp -->
+    <div class="deletion-card primary">
+      <span class="badge">⚡ Recommended — Instant</span>
+      <h3>📱 Delete via WhatsApp</h3>
+      <div class="instructions">
+        <strong>Text this exact message to Buddy:</strong>
+        DELETE MY DATA
+      </div>
+      <p style="font-size:0.9rem; color:#6c757d; margin-bottom:0.25rem;">This will immediately:</p>
+      <ul>
+        <li>Delete all your habit logs</li>
+        <li>Remove your entire streak history</li>
+        <li>Delete your anonymized account ID</li>
+        <li>Stop all future nudge messages</li>
+        <li>Send a confirmation reply to you</li>
+      </ul>
+      <a href="https://wa.me/YOUR_WHATSAPP_NUMBER?text=DELETE%20MY%20DATA" class="card-btn" target="_blank" rel="noopener">
+        Open WhatsApp to Delete →
+      </a>
+    </div>
+
+    <!-- Option 2: Email -->
+    <div class="deletion-card">
+      <span class="badge" style="background:rgba(108,117,125,0.1); color:#495057;">📧 Email Request — Within 30 Days</span>
+      <h3>📧 Delete via Email</h3>
+      <div class="instructions" style="border-left-color:#6c757d;">
+        <strong>Email us at:</strong>
+        theme.innov8@gmail.com
+      </div>
+      <p style="font-size:0.9rem; color:#6c757d; margin-bottom:0.5rem;">Include in your email:</p>
+      <ul>
+        <li>Subject: "Data Deletion Request — Buddy"</li>
+        <li>Your WhatsApp phone number (including country code)</li>
+        <li>We will confirm deletion within 30 days</li>
+      </ul>
+      <a
+        href="mailto:theme.innov8@gmail.com?subject=Data%20Deletion%20Request%20-%20Buddy&body=Hello%2C%0A%0APlease%20delete%20all%20my%20Buddy%20habit%20data.%0A%0AMy%20WhatsApp%20number%3A%20%5BYOUR_NUMBER_WITH_COUNTRY_CODE%5D%0A%0AThank%20you."
+        class="card-btn outline"
+      >
+        Send Email Request →
+      </a>
+    </div>
+
+  </div>
+
+  <!-- What Gets Deleted -->
+  <h2 class="section-h2">What Gets Deleted</h2>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Data Type</th>
+        <th>Deleted?</th>
+        <th>Timeline</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Habit log entries</td>
+        <td class="check">✅ Yes</td>
+        <td>Immediately (WhatsApp) / within 30 days (email)</td>
+      </tr>
+      <tr>
+        <td>Streak history &amp; milestone records</td>
+        <td class="check">✅ Yes</td>
+        <td>Immediately (WhatsApp) / within 30 days (email)</td>
+      </tr>
+      <tr>
+        <td>Anonymized account ID (hashed phone ID)</td>
+        <td class="check">✅ Yes</td>
+        <td>Within 30 days of request</td>
+      </tr>
+      <tr>
+        <td>Scheduled nudge messages</td>
+        <td class="check">✅ Yes — cancelled</td>
+        <td>Immediately</td>
+      </tr>
+      <tr>
+        <td>AI conversation context</td>
+        <td class="check">✅ Yes</td>
+        <td>Immediately</td>
+      </tr>
+      <tr>
+        <td>Aggregated anonymous stats (cannot be linked to you)</td>
+        <td class="no">❌ No — anonymized</td>
+        <td>Retained indefinitely but not identifiable</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- What We Never Stored -->
+  <h2 class="section-h2">What We Never Stored</h2>
+
+  <div class="reassurance">
+    <p>We never stored any of the following — so there's nothing to delete for these:</p>
+    <p><strong>✓ Raw phone number</strong> — Only a one-way SHA-256 hash was ever stored, not your actual number.</p>
+    <p><strong>✓ Your name</strong> — Buddy never asked for or stored your name.</p>
+    <p><strong>✓ Email address</strong> — No email was ever collected.</p>
+    <p><strong>✓ Location data</strong> — Buddy does not access your location.</p>
+    <p><strong>✓ Contacts, photos, or camera data</strong> — Buddy is WhatsApp-only; no device permissions requested.</p>
+  </div>
+
+  <!-- FAQ -->
+  <h2 class="section-h2">Frequently Asked Questions</h2>
+
+  <div class="faq-grid">
+    <div class="faq-item">
+      <h4>How long does deletion actually take?</h4>
+      <p>Using the WhatsApp method ("DELETE MY DATA"), deletion is processed within seconds and you'll get a confirmation message. Email requests are processed within 30 days.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Will I lose my streak history permanently?</h4>
+      <p>Yes. Deletion is permanent and cannot be undone. Your streak counter, habit logs, and all history will be erased. Consider texting "My Data" first if you want a summary before deleting.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Can I re-register after deleting my data?</h4>
+      <p>Yes. Just text "Hi" to Buddy again from the same or a different WhatsApp number and you'll start fresh, as if you're a new user.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Will I receive a confirmation?</h4>
+      <p>Yes. If you delete via WhatsApp, Buddy will reply with a confirmation message. For email requests, we'll reply to your email confirming the deletion.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Does deletion stop all WhatsApp messages from Buddy?</h4>
+      <p>Yes. Once your account is deleted, Buddy will no longer send you any messages, including nudges, summaries, or replies.</p>
+    </div>
+    <div class="faq-item">
+      <h4>What about data stored by WhatsApp / Meta?</h4>
+      <p>Buddy can only delete data stored in our systems. Message history in the WhatsApp app itself is controlled by Meta. Please refer to <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">Meta's Privacy Policy</a> for information on managing WhatsApp data.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Is this required for Meta / Facebook App Review compliance?</h4>
+      <p>Yes. This page fulfills Meta's requirement that apps using the WhatsApp Business Cloud API provide a clear data deletion mechanism. By texting "DELETE MY DATA" to Buddy or submitting an email request, your data is fully removed from our systems.</p>
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <div class="contact-final">
+    <h3>📬 Still Have Questions?</h3>
+    <p>If you have any questions about data deletion or your privacy rights, please contact us:</p>
+    <p><strong>Email:</strong> <a href="mailto:theme.innov8@gmail.com">theme.innov8@gmail.com</a></p>
+    <p><strong>Subject:</strong> "Data / Privacy — Buddy"</p>
+    <p><strong>WhatsApp:</strong> Text "Help" to Buddy for in-app support</p>
+    <p style="margin-top:0.75rem; color:#6c757d; font-size:0.9rem;">See also: <a href="habit-privacy-policy.html">Privacy Policy</a> · <a href="habit-terms-of-service.html">Terms of Service</a></p>
+  </div>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo">🤖 <span>Buddy</span></div>
+        <p>Your WhatsApp AI Habit Coach. Build streaks, not excuses.</p>
+      </div>
+      <div class="footer-col">
+        <h4>App</h4>
+        <ul>
+          <li><a href="habit-index.html#features">Features</a></li>
+          <li><a href="habit-index.html#how-it-works">How It Works</a></li>
+          <li><a href="habit-index.html#download">Get Started</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="habit-privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="habit-terms-of-service.html">Terms of Service</a></li>
+          <li><a href="habit-data-deletion.html">Data Deletion</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="mailto:theme.innov8@gmail.com">Contact Us</a></li>
+          <li><a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" rel="noopener">WhatsApp Buddy</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="footer-divider" />
+    <div class="footer-bottom">
+      <p>© 2025 ThemeInnov8. Made with ❤️ for habit builders everywhere.</p>
+      <p><a href="habit-index.html">Home</a> · <a href="habit-privacy-policy.html">Privacy Policy</a> · <a href="habit-terms-of-service.html">Terms</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+</script>
+</body>
+</html>

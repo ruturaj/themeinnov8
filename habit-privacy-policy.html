@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Buddy WhatsApp AI Habit Coach</title>
+  <meta name="description" content="Buddy's Privacy Policy — how we collect, use, and protect your data." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="habit-style.css" />
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="nav" id="nav">
+  <a href="habit-index.html" class="nav-logo">🤖 <span>Buddy</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="habit-index.html#features">Features</a></li>
+    <li><a href="habit-index.html#how-it-works">How It Works</a></li>
+    <li><a href="habit-privacy-policy.html" class="active">Privacy</a></li>
+    <li><a href="habit-terms-of-service.html">Terms</a></li>
+    <li><a href="habit-data-deletion.html">Data Deletion</a></li>
+    <li><a href="https://wa.me/YOUR_WHATSAPP_NUMBER" class="nav-cta" target="_blank" rel="noopener">Start on WhatsApp</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ===== HERO ===== -->
+<div class="legal-hero">
+  <h1>🔒 Privacy Policy</h1>
+  <p class="subtitle">How Buddy collects, uses, and protects your information.</p>
+  <p class="updated">Last Updated: March 2025</p>
+</div>
+
+<!-- ===== CONTENT ===== -->
+<main class="legal-body">
+
+  <div class="summary-box">
+    <p>📋 <strong>Quick Summary:</strong> We collect only what's needed to track your habits. We never sell your data, never store your raw phone number, and you can delete everything at any time by texting <strong>"DELETE MY DATA"</strong> to Buddy.</p>
+  </div>
+
+  <h2>1. Introduction</h2>
+  <p>Welcome to Buddy ("we," "our," or "us"), a WhatsApp AI habit coach operated by <strong>ThemeInnov8</strong>. We are committed to protecting your privacy and ensuring transparency about how we collect, use, and safeguard your personal information.</p>
+  <p>This Privacy Policy explains how we handle your data when you use Buddy via WhatsApp. By messaging the Buddy WhatsApp number, you agree to the collection and use of information in accordance with this policy.</p>
+
+  <h2>2. Information We Collect</h2>
+
+  <h3>2.1 Information You Provide</h3>
+  <p>When you use Buddy, we receive the habit messages you send via WhatsApp. Specifically:</p>
+  <ul>
+    <li><strong>Habit messages:</strong> The text content of messages you send to track habits (e.g., "ran 5km", "no coffee today").</li>
+    <li><strong>Anonymized account ID:</strong> We compute a one-way SHA-256 hash of your WhatsApp phone number. <strong>Your raw phone number is never stored.</strong> This hash is used solely to associate your messages with your habit history.</li>
+  </ul>
+
+  <h3>2.2 Automatically Collected Data</h3>
+  <p>When you interact with Buddy, we automatically collect:</p>
+  <ul>
+    <li>Message timestamps</li>
+    <li>Habit categories and logged actions (derived from your messages)</li>
+    <li>Streak counters and progress metrics</li>
+  </ul>
+
+  <h3>2.3 What We Do NOT Collect</h3>
+  <ul>
+    <li>Your name</li>
+    <li>Your email address</li>
+    <li>Your location or GPS data</li>
+    <li>Your contacts or address book</li>
+    <li>Photos, camera, or microphone data</li>
+    <li>Your raw phone number (only a one-way hash is stored)</li>
+    <li>IP addresses or device identifiers</li>
+  </ul>
+
+  <h2>3. How We Use Your Information</h2>
+  <table class="legal-table">
+    <thead>
+      <tr><th>Purpose</th><th>Data Used</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Identify your account across sessions</td><td>Hashed phone ID (never the raw number)</td></tr>
+      <tr><td>Track habits and maintain streaks</td><td>Habit log entries, timestamps</td></tr>
+      <tr><td>Send AI-generated replies and nudges</td><td>Your messages, habit history</td></tr>
+      <tr><td>Generate weekly summaries and insights</td><td>Aggregated habit logs</td></tr>
+      <tr><td>Improve AI response quality</td><td>Anonymized, aggregated usage patterns only</td></tr>
+    </tbody>
+  </table>
+
+  <h2>4. Information Sharing</h2>
+
+  <h3>4.1 With Service Providers</h3>
+  <p>We share data with trusted third parties who help us operate Buddy:</p>
+  <ul>
+    <li><strong>Firebase / Google Cloud:</strong> Authentication, Firestore database, and Cloud Functions for message processing.</li>
+    <li><strong>WhatsApp Business Cloud API (Meta):</strong> Message delivery only. We do not control Meta's data handling — see <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">Meta's Privacy Policy</a>.</li>
+    <li><strong>Google Vertex AI / Gemini:</strong> AI responses. Messages sent to the LLM API are not retained by Google per their API terms.</li>
+  </ul>
+
+  <h3>4.2 We Do NOT</h3>
+  <ul>
+    <li>❌ Sell your personal information to third parties</li>
+    <li>❌ Share your data with advertisers</li>
+    <li>❌ Use your data for targeted advertising</li>
+    <li>❌ Store your raw phone number</li>
+    <li>❌ Share data with other users</li>
+  </ul>
+
+  <h2>5. Data Security</h2>
+  <p>We implement industry-standard security measures to protect your data:</p>
+  <ul>
+    <li>Phone numbers hashed with SHA-256 before any storage — raw numbers are discarded immediately</li>
+    <li>All data encrypted in transit (HTTPS/TLS)</li>
+    <li>Firestore security rules restrict access to authorized Cloud Functions only</li>
+    <li>No third-party analytics tools have access to personally identifiable data</li>
+    <li>Regular security reviews of our Firebase configuration and Cloud Function permissions</li>
+  </ul>
+  <p>While we strive to protect your information, no method of internet transmission is 100% secure. We cannot guarantee absolute security.</p>
+
+  <h2>6. Data Retention</h2>
+  <p>We retain your information as follows:</p>
+  <ul>
+    <li><strong>Habit logs:</strong> Retained while your account is active</li>
+    <li><strong>Streak history:</strong> Retained while your account is active</li>
+    <li><strong>Anonymized account ID:</strong> Deleted within 30 days of an account deletion request</li>
+    <li><strong>Aggregated anonymous stats:</strong> May be retained indefinitely — these cannot be linked back to any individual</li>
+  </ul>
+
+  <h2>7. Your Rights and Choices</h2>
+
+  <h3>7.1 Access</h3>
+  <p>Text <strong>"My Data"</strong> to Buddy on WhatsApp to receive a summary of your tracked habits and streak history.</p>
+
+  <h3>7.2 Correction</h3>
+  <p>Text <strong>"Correct [habit] to [value]"</strong> to Buddy to update a habit log entry.</p>
+
+  <h3>7.3 Deletion</h3>
+  <p>You can delete all your data at any time:</p>
+  <ul>
+    <li><strong>Instant:</strong> Text <strong>"DELETE MY DATA"</strong> to Buddy — you'll receive confirmation within seconds.</li>
+    <li><strong>By email:</strong> Send a request to <a href="mailto:theme.innov8@gmail.com">theme.innov8@gmail.com</a> — processed within 30 days.</li>
+    <li><strong>Dedicated page:</strong> Visit our <a href="habit-data-deletion.html">Data Deletion page</a> for full instructions.</li>
+  </ul>
+
+  <h3>7.4 Opt-Out of Nudges</h3>
+  <p>Text <strong>"Stop nudges"</strong> to Buddy to disable proactive reminder messages at any time.</p>
+
+  <h3>7.5 Stop Using Buddy</h3>
+  <p>Simply stop messaging Buddy. No further messages will be sent unless you opt into nudges, which you can disable as described above.</p>
+
+  <h2>8. Children's Privacy</h2>
+  <p>Buddy is not intended for users under the age of 13. We do not knowingly collect data from children under 13. If you believe your child has used Buddy, please contact us at <a href="mailto:theme.innov8@gmail.com">theme.innov8@gmail.com</a> and we will delete their data immediately.</p>
+
+  <h2>9. International Data Transfers</h2>
+  <p>Your data may be processed in countries other than your own, including the United States, where our service providers (Google/Firebase, Meta) operate. We ensure appropriate data processing agreements are in place for such transfers.</p>
+
+  <h2>10. Changes to This Policy</h2>
+  <p>We may update this Privacy Policy from time to time. We will notify you of significant changes by:</p>
+  <ul>
+    <li>Sending a notice via WhatsApp to active users</li>
+    <li>Updating the "Last Updated" date at the top of this page</li>
+  </ul>
+  <p>Your continued use of Buddy after changes constitutes acceptance of the updated policy.</p>
+
+  <h2>11. Third-Party Services</h2>
+  <p>Buddy integrates with the following third-party services, each with their own privacy policies:</p>
+  <ul>
+    <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy Policy</a></li>
+    <li><a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">Meta (WhatsApp) Privacy Policy</a></li>
+    <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google AI / Gemini Privacy Policy</a></li>
+  </ul>
+
+  <h2>12. California Privacy Rights (CCPA)</h2>
+  <p>If you are a California resident, you have additional rights under the CCPA:</p>
+  <ul>
+    <li>Right to know what personal information we collect</li>
+    <li>Right to delete your personal information</li>
+    <li>Right to opt-out of sale of personal information — <strong>we do not sell data</strong></li>
+    <li>Right to non-discrimination for exercising these rights</li>
+  </ul>
+
+  <h2>13. European Privacy Rights (GDPR)</h2>
+  <p>If you are in the European Economic Area (EEA), you have additional rights under GDPR:</p>
+  <ul>
+    <li>Right to access your data</li>
+    <li>Right to rectification</li>
+    <li>Right to erasure ("right to be forgotten")</li>
+    <li>Right to restrict processing</li>
+    <li>Right to data portability</li>
+    <li>Right to object to processing</li>
+  </ul>
+  <p>Our legal basis for processing your data is your consent (by choosing to message Buddy) and the performance of our service contract with you.</p>
+
+  <h2>14. Data Protection Officer</h2>
+  <p>For privacy-related inquiries or to exercise your rights, contact us:</p>
+
+  <div class="contact-box">
+    <h3>📬 Contact Us</h3>
+    <p><strong>Email:</strong> <a href="mailto:theme.innov8@gmail.com">theme.innov8@gmail.com</a></p>
+    <p><strong>WhatsApp:</strong> Text "Help" to Buddy</p>
+    <p><strong>Subject line:</strong> "Privacy Request — Buddy"</p>
+  </div>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo">🤖 <span>Buddy</span></div>
+        <p>Your WhatsApp AI Habit Coach. Build streaks, not excuses.</p>
+      </div>
+      <div class="footer-col">
+        <h4>App</h4>
+        <ul>
+          <li><a href="habit-index.html#features">Features</a></li>
+          <li><a href="habit-index.html#how-it-works">How It Works</a></li>
+          <li><a href="habit-index.html#download">Get Started</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="habit-privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="habit-terms-of-service.html">Terms of Service</a></li>
+          <li><a href="habit-data-deletion.html">Data Deletion</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="mailto:theme.innov8@gmail.com">Contact Us</a></li>
+          <li><a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" rel="noopener">WhatsApp Buddy</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="footer-divider" />
+    <div class="footer-bottom">
+      <p>© 2025 ThemeInnov8. Made with ❤️ for habit builders everywhere.</p>
+      <p><a href="habit-index.html">Home</a> · <a href="habit-terms-of-service.html">Terms of Service</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+</script>
+</body>
+</html>
