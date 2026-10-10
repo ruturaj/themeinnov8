@@ -1,299 +1,309 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Theme Innov8 - Technology Innovation & Development</title>
-    <meta name="description" content="Theme Innov8 - Innovative technology solutions for startups and industries. Mobile apps, IoT systems, AI applications, and learning development.">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Theme Innov8 — AI transformation consultants</title>
+  <meta name="description" content="Theme Innov8 helps companies find where AI pays off, build the agents and automations that deliver it, and train their teams to run them. Based in Hyderabad, India.">
+  <meta property="og:title" content="Theme Innov8 — AI transformation consultants">
+  <meta property="og:description" content="Strategy, engineering and enablement for companies becoming AI-native.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://themeinnov8.com/">
+  <meta name="theme-color" content="#0B0C10">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%230B0C10%22/%3E%3Cpath d=%22M9 22 16 9l7 13%22 fill=%22none%22 stroke=%22%235B4BFF%22 stroke-width=%223.2%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <h2>THEME INNOV8</h2>
-            </div>
-            <div class="nav-menu">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </div>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">Innovative Technology Solutions</h1>
-                <p class="hero-subtitle">Transforming ideas into powerful digital experiences through cutting-edge mobile apps, IoT systems, and AI-driven solutions</p>
-                <div class="hero-buttons">
-                    <a href="#services" class="btn btn-primary">Our Services</a>
-                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="floating-card">
-                    <i class="fas fa-mobile-alt"></i>
-                    <span>Mobile Apps</span>
-                </div>
-                <div class="floating-card">
-                    <i class="fas fa-cloud"></i>
-                    <span>Cloud Solutions</span>
-                </div>
-                <div class="floating-card">
-                    <i class="fas fa-robot"></i>
-                    <span>IoT & AI</span>
-                </div>
-            </div>
+  <header class="nav" id="top">
+    <div class="wrap nav__inner">
+      <a href="#top" class="brand" aria-label="Theme Innov8 home">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__name">Theme Innov8</span>
+      </a>
+      <nav class="nav__links" id="nav-links" aria-label="Primary">
+        <a href="#approach">Approach</a>
+        <a href="#services">Services</a>
+        <a href="#ventures">Ventures</a>
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="btn btn--sm btn--ink nav__cta">Start a conversation</a>
+      </nav>
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow"><span class="dot"></span>AI transformation consultants · Hyderabad</p>
+          <h1>AI that does the work, <em>not&nbsp;just the demo.</em></h1>
+          <p class="lede">We help companies find where AI really pays off, build the agents and automations that deliver it, and train their people to run them. Strategy, engineering and enablement from one small, hands-on team.</p>
+          <div class="hero__actions">
+            <a href="#contact" class="btn btn--accent">Book an AI opportunity call <span aria-hidden="true">→</span></a>
+            <a href="#approach" class="btn btn--ghost">See how we work</a>
+          </div>
         </div>
+
+        <div class="hero__visual" aria-hidden="true">
+          <div class="run">
+            <div class="run__head">
+              <span class="run__status"><span class="pulse"></span>Agent running</span>
+              <span class="run__name">quote-desk.workflow</span>
+            </div>
+            <ol class="run__steps">
+              <li><span class="tick"></span><div><b>Read new RFQ emails</b><small>Inbox · attachments</small></div></li>
+              <li><span class="tick"></span><div><b>Extract parts &amp; quantities</b><small>LLM · structured output</small></div></li>
+              <li><span class="tick"></span><div><b>Check stock &amp; past pricing</b><small>ERP · price history</small></div></li>
+              <li><span class="tick"></span><div><b>Draft the quote</b><small>Template · brand voice</small></div></li>
+              <li><span class="tick"></span><div><b>Send for human approval</b><small>Owner signs off</small></div></li>
+            </ol>
+            <div class="run__foot">
+              <span>Human in the loop</span>
+              <span class="run__chip">Illustrative workflow</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2>About Theme Innov8</h2>
-                <p>Led by innovation, driven by excellence</p>
-            </div>
-            <div class="about-content">
-                <div class="founder-card">
-                    <div class="founder-info">
-                        <div class="founder-avatar">
-                            <i class="fas fa-user-tie"></i>
-                        </div>
-                        <div class="founder-details">
-                            <h3>Shruti Dhekane</h3>
-                            <p class="founder-title">Founder</p>
-                            <p class="founder-degree">M.Tech. Computer Science & Engineering</p>
-                            <p class="founder-experience">7 years of experience in building cloud-based apps and mobile applications for 0-to-1 products. Leading a team of 3 freelance developers for delivering end-to-end projects.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="company-info">
-                    <h3>Our Mission</h3>
-                    <p>At Theme Innov8, we specialize in transforming innovative ideas into robust technological solutions. From Industry 4.0 automation to educational platforms, we deliver comprehensive technology development services that drive growth and efficiency.</p>
-                    
-                    <div class="stats">
-                        <div class="stat-item">
-                            <div class="stat-number">7+</div>
-                            <div class="stat-label">Years Experience</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">32+</div>
-                            <div class="stat-label">Schools Deployed</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">3+</div>
-                            <div class="stat-label">Team Members</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- FACTS -->
+    <section class="facts" aria-label="At a glance">
+      <div class="wrap facts__row">
+        <div class="fact"><strong>7+ yrs</strong><span>building 0-to-1 cloud &amp; mobile products</span></div>
+        <div class="fact"><strong>32+</strong><span>schools in South India on an EdTech platform we built</span></div>
+        <div class="fact"><strong>Industry 4.0</strong><span>shopfloor platform for an auto-component maker</span></div>
+        <div class="fact"><strong>3</strong><span>AI-first ventures built in our own studio</span></div>
+      </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Services</h2>
-                <p>Comprehensive technology solutions for modern businesses</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3>Mobile App Development</h3>
-                    <p>Native Android and cross-platform Flutter applications with robust cloud backends for seamless user experiences.</p>
-                    <ul>
-                        <li>Android Development</li>
-                        <li>Flutter Applications</li>
-                        <li>Cloud Integration</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-cloud"></i>
-                    </div>
-                    <h3>SaaS Product Development</h3>
-                    <p>Scalable software-as-a-service solutions using modern frameworks and best practices.</p>
-                    <ul>
-                        <li>PHP (Laravel)</li>
-                        <li>Python (Django)</li>
-                        <li>Cloud Architecture</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>AI & Data Analysis</h3>
-                    <p>Intelligent agentic frameworks and applications for advanced data analysis and automation.</p>
-                    <ul>
-                        <li>OpenAI Integration</li>
-                        <li>n8n Workflows</li>
-                        <li>crew.ai Applications</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-microchip"></i>
-                    </div>
-                    <h3>IoT Systems</h3>
-                    <p>Internet of Things solutions and products using cutting-edge hardware and software integration.</p>
-                    <ul>
-                        <li>Raspberry Pi Solutions</li>
-                        <li>Arduino Projects</li>
-                        <li>Industry 4.0 Automation</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>Learning & Development</h3>
-                    <p>Professional training and educational workshops to build technical capabilities.</p>
-                    <ul>
-                        <li>Product Management Training</li>
-                        <li>Robotics Workshops for Kids</li>
-                        <li>Technology Education</li>
-                    </ul>
-                </div>
-            </div>
+    <!-- POSITION -->
+    <section class="section">
+      <div class="wrap split">
+        <div>
+          <p class="kicker">Why us</p>
+          <h2>Pilots are easy. <em>Production is the work.</em></h2>
         </div>
+        <div class="split__body">
+          <p>The models are not what holds most companies back. The hard part is the messy workflow, the scattered data and a team that hasn't changed how it works yet.</p>
+          <p>We handle all three. We map where AI fits your business, engineer it into the tools you already use, and stay until your people run it on their own.</p>
+          <ul class="checks">
+            <li>Engineers who ship, not slide decks</li>
+            <li>Built around your real workflows and data</li>
+            <li>Humans stay in control of every decision that matters</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <div class="section-header">
-                <h2>Featured Projects</h2>
-                <p>Real-world solutions that make a difference</p>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-industry"></i>
-                        </div>
-                        <h3>Industry 4.0 Automation</h3>
-                        <span class="project-client">ET Group</span>
-                    </div>
-                    <p>Conceptualized and developed an Industry 4.0, IoT-based shopfloor automation platform on web and mobile, driving multi-supplier shopfloor efficiency and business intelligence for a leading auto component manufacturing company in India.</p>
-                    <div class="project-tags">
-                        <span class="tag">IoT</span>
-                        <span class="tag">Industry 4.0</span>
-                        <span class="tag">Business Intelligence</span>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <h3>Education Startup Platform</h3>
-                        <span class="project-client">EdTech Startup</span>
-                    </div>
-                    <p>Designed and developed mobile and web experience to deliver course content via apps. Interfaces used by both teachers and kids for course content and quizzes. Successfully deployed in over 32 schools across South India.</p>
-                    <div class="project-tags">
-                        <span class="tag">Mobile Apps</span>
-                        <span class="tag">Web Platform</span>
-                        <span class="tag">Education</span>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <h3>Robotics Workshops</h3>
-                        <span class="project-client">Educational Initiative</span>
-                    </div>
-                    <p>Kid-friendly robotics workshops designed to drive awareness and curiosity at a young age, making technology accessible and engaging for the next generation of innovators.</p>
-                    <div class="project-tags">
-                        <span class="tag">Robotics</span>
-                        <span class="tag">Education</span>
-                        <span class="tag">Kids Programming</span>
-                    </div>
-                </div>
-            </div>
+    <!-- APPROACH -->
+    <section class="section section--soft" id="approach">
+      <div class="wrap">
+        <div class="head">
+          <p class="kicker">Approach</p>
+          <h2>From first conversation to <em>AI&#8209;native operations.</em></h2>
         </div>
-    </section>    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2>Get in Touch</h2>
-                <p>Ready to transform your ideas into reality?</p>
-            </div>
-            <div class="contact-content-simple">
-                <div class="contact-info-centered">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Email</h4>
-                            <div class="email-container">
-                                <span class="email-display" data-email="Shruti.Dhekane@themeinnov8.com"></span>
-                                <span class="email-display" data-email="themeinnov8@gmail.com"></span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Location</h4>
-                            <p>H1110, Rajapushpa Atria<br>Kokapet, Hyderabad, India</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step__num">01</span>
+            <h3>Discover</h3>
+            <p>We sit with your teams, map how work actually moves, and rank where AI saves the most time, money or risk.</p>
+            <span class="step__out">You get: an AI opportunity map</span>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">02</span>
+            <h3>Design</h3>
+            <p>We pick the few use cases worth doing first and design the workflow, data flow, guardrails and success measures.</p>
+            <span class="step__out">You get: a prioritised roadmap</span>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">03</span>
+            <h3>Build</h3>
+            <p>We engineer the agents, automations and integrations, connected to your email, ERP, CRM or apps, with a person approving where it counts.</p>
+            <span class="step__out">You get: working systems in production</span>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">04</span>
+            <h3>Enable &amp; scale</h3>
+            <p>We train your people to use, own and extend what we built, then measure, iterate and roll it out to the next team.</p>
+            <span class="step__out">You get: a team that runs it without us</span>
+          </li>
+        </ol>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3>THEME INNOV8</h3>
-                    <p>Innovative technology solutions for a digital future</p>
-                </div>
-                <div class="footer-links">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#services">Services</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#contact">Contact</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Theme Innov8. All rights reserved.</p>
-            </div>
+    <!-- SERVICES -->
+    <section class="section" id="services">
+      <div class="wrap">
+        <div class="head">
+          <p class="kicker">Services</p>
+          <h2>Everything it takes to put AI <em>to&nbsp;work.</em></h2>
         </div>
-    </footer>
+        <div class="cards">
+          <article class="card card--wide reveal">
+            <div class="card__icon"><svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/><circle cx="12" cy="12" r="3.2"/></svg></div>
+            <h3>AI strategy &amp; roadmap</h3>
+            <p>Opportunity mapping, use-case prioritisation and a practical plan your leadership can act on, grounded in how your business really runs.</p>
+            <ul class="tags"><li>Opportunity mapping</li><li>Build vs. buy</li><li>Governance &amp; guardrails</li></ul>
+          </article>
+          <article class="card card--wide reveal">
+            <div class="card__icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="7" height="6" rx="1.5"/><rect x="14" y="14" width="7" height="6" rx="1.5"/><path d="M10 7h4a3 3 0 0 1 3 3v4"/></svg></div>
+            <h3>Agents &amp; workflow automation</h3>
+            <p>AI agents and automations that handle repetitive, document-heavy work end to end, with people approving the steps that matter.</p>
+            <ul class="tags"><li>OpenAI &amp; Claude</li><li>n8n workflows</li><li>crew.ai agents</li><li>MCP integrations</li></ul>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+            <h3>AI-native products</h3>
+            <p>SaaS, web and mobile products with AI built in from the start, from first prototype to production cloud.</p>
+            <ul class="tags"><li>Laravel</li><li>Django</li><li>Flutter &amp; Android</li></ul>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon"><svg viewBox="0 0 24 24"><path d="M4 20V10l5 3V10l5 3V6h6v14z"/><path d="M8 20v-3M12 20v-3M16 20v-3"/></svg></div>
+            <h3>Industrial AI &amp; IoT</h3>
+            <p>Shopfloor data, connected machines and business intelligence for manufacturers moving to Industry 4.0.</p>
+            <ul class="tags"><li>Industry 4.0</li><li>Raspberry Pi</li><li>Arduino</li></ul>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon"><svg viewBox="0 0 24 24"><path d="M3 8l9-4 9 4-9 4z"/><path d="M7 10v5c0 1.7 2.2 3 5 3s5-1.3 5-3v-5"/></svg></div>
+            <h3>AI enablement &amp; training</h3>
+            <p>Hands-on programs that get founders, leaders and builders using AI in their real work, delivered through 41 Launchpad.</p>
+            <ul class="tags"><li>Team upskilling</li><li>Product management</li><li>Workshops</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
+    <!-- VENTURES -->
+    <section class="section section--ink" id="ventures">
+      <div class="ink__glow" aria-hidden="true"></div>
+      <div class="wrap">
+        <div class="head head--split">
+          <div>
+            <p class="kicker">Ventures</p>
+            <h2>We run what <em>we&nbsp;recommend.</em></h2>
+          </div>
+          <p class="head__note">We don't just advise on AI-native businesses. We build our own in our studio, and what we learn there goes into your engagement.</p>
+        </div>
+        <div class="ventures">
+          <a class="venture reveal" href="https://vibeinteriors.in" target="_blank" rel="noopener">
+            <span class="venture__tag">Interior design</span>
+            <h3>Vibe Interiors</h3>
+            <p>An AI-native interior design company in Hyderabad, with unit-exact 3D twins of homes and an AI design copilot that plugs into ChatGPT or Claude.</p>
+            <span class="venture__link">vibeinteriors.in <span aria-hidden="true">↗</span></span>
+          </a>
+          <a class="venture reveal" href="https://41launchpad.com" target="_blank" rel="noopener">
+            <span class="venture__tag">AI training</span>
+            <h3>41 Launchpad</h3>
+            <p>Short, hands-on AI programs for founders, leaders and builders. Participants learn by building on their own work and leave with tools they use the next day.</p>
+            <span class="venture__link">41launchpad.com <span aria-hidden="true">↗</span></span>
+          </a>
+          <a class="venture reveal" href="https://github.com/themeinnov8/founderstaff" target="_blank" rel="noopener">
+            <span class="venture__tag">Open source</span>
+            <h3>founderstaff</h3>
+            <p>An operating system for founders. It turns a plan into an agent-powered workspace with a chief of staff, a red-teamer and a research analyst built in.</p>
+            <span class="venture__link">github.com/themeinnov8 <span aria-hidden="true">↗</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section class="section" id="work">
+      <div class="wrap">
+        <div class="head">
+          <p class="kicker">Selected work</p>
+          <h2>Built for real operations, <em>used by real&nbsp;people.</em></h2>
+        </div>
+        <div class="work">
+          <article class="work__item reveal">
+            <div class="work__meta"><span>ET Group</span><span>Manufacturing</span></div>
+            <h3>Industry 4.0 shopfloor automation</h3>
+            <p>We conceptualised and built an IoT-based shopfloor automation platform on web and mobile for a leading Indian auto-component manufacturer. It improves efficiency across multiple suppliers on the shopfloor and gives the business real-time intelligence.</p>
+            <ul class="tags"><li>IoT</li><li>Industry 4.0</li><li>Business intelligence</li></ul>
+          </article>
+          <article class="work__item reveal">
+            <div class="work__meta"><span>EdTech startup</span><span>Education</span></div>
+            <h3>Learning platform in 32+ schools</h3>
+            <p>Mobile and web apps that deliver course content and quizzes to teachers and students, now running in more than 32 schools across South India.</p>
+            <ul class="tags"><li>Mobile apps</li><li>Web platform</li><li>Education</li></ul>
+          </article>
+          <article class="work__item reveal">
+            <div class="work__meta"><span>Educational initiative</span><span>Learning</span></div>
+            <h3>Robotics workshops for kids</h3>
+            <p>Kid-friendly robotics workshops that spark curiosity early and make technology hands-on and approachable for the next generation.</p>
+            <ul class="tags"><li>Robotics</li><li>Education</li><li>Kids programming</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section section--soft" id="about">
+      <div class="wrap about">
+        <div class="about__card reveal">
+          <div class="avatar" aria-hidden="true">SD</div>
+          <h3>Shruti Dhekane</h3>
+          <p class="about__role">Founder</p>
+          <p class="about__cred">M.Tech., Computer Science &amp; Engineering</p>
+        </div>
+        <div class="about__body">
+          <p class="kicker">About</p>
+          <h2>A builder's studio <em>for the AI&nbsp;era.</em></h2>
+          <p>Theme Innov8 started as a technology studio that turned ideas into working products: mobile apps, cloud platforms, IoT systems and learning programs. Today we put that engineering background to work on one problem, helping businesses become AI-native.</p>
+          <p>Our founder, Shruti Dhekane, has spent 7 years building cloud and mobile applications for 0-to-1 products. She leads a small team of freelance engineers who deliver projects end to end. You work directly with the people building your system.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section cta" id="contact">
+      <div class="wrap">
+        <div class="cta__box">
+          <div class="cta__glow" aria-hidden="true"></div>
+          <p class="kicker kicker--light">Start a conversation</p>
+          <h2>Where would AI make the biggest difference <em>in your&nbsp;business?</em></h2>
+          <p>Tell us how your team works today. We'll come back with where we think AI fits and what it would take to get there.</p>
+          <div class="cta__actions">
+            <a class="btn btn--accent" href="#contact" data-mail="Shruti.Dhekane|themeinnov8.com" data-subject="AI opportunity call">Email us <span aria-hidden="true">→</span></a>
+            <button class="btn btn--glass" type="button" data-copy="Shruti.Dhekane|themeinnov8.com">Copy email address</button>
+          </div>
+          <div class="cta__details">
+            <div><span>Email</span><a href="#contact" data-mail="Shruti.Dhekane|themeinnov8.com" data-show>Shruti.Dhekane [at] themeinnov8.com</a><a href="#contact" data-mail="themeinnov8|gmail.com" data-show>themeinnov8 [at] gmail.com</a></div>
+            <div><span>Studio</span><p>H1110, Rajapushpa Atria, Kokapet<br>Hyderabad, India</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <a href="#top" class="brand brand--sm"><span class="brand__mark" aria-hidden="true"></span><span class="brand__name">Theme Innov8</span></a>
+      <nav aria-label="Footer">
+        <a href="#approach">Approach</a>
+        <a href="#services">Services</a>
+        <a href="#ventures">Ventures</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+        <a href="community.html">Community Library</a>
+        <a href="habit-index.html">Buddy</a>
+      </nav>
+      <p>© <span data-year>2026</span> Theme Innov8. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script src="script.js" defer></script>
 </body>
 </html>
