@@ -332,11 +332,12 @@ h1 em, h2 em {
 .cta__box h2 { max-width: 15em; margin-bottom: 22px; }
 .cta__box h2 em { color: var(--accent-2); }
 .cta__box > p { color: var(--ink-dim); font-size: 19px; max-width: 34em; }
-.cta__actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 36px 0 56px; }
-.cta__details { display: grid; grid-template-columns: repeat(2, minmax(0, max-content)); gap: 64px; padding-top: 32px; border-top: 1px solid var(--ink-line); }
-.cta__details span { display: block; font-size: 12.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-dim); margin-bottom: 10px; }
-.cta__details a, .cta__details p { display: block; color: var(--ink-text); font-size: 16px; line-height: 1.7; overflow-wrap: anywhere; }
-.cta__details a:hover { color: var(--accent-2); }
+.talk { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 44px 0 40px; }
+.talk li { padding: 26px; border-radius: var(--r-md); border: 1px solid var(--ink-line); background: rgba(255, 255, 255, .03); }
+.talk span { display: block; font-family: var(--serif); font-style: italic; font-size: 30px; line-height: 1; color: var(--accent-2); margin-bottom: 20px; }
+.talk h3 { font-size: 18px; margin-bottom: 8px; }
+.talk p { color: var(--ink-dim); font-size: 15px; }
+.cta__box > .cta__where { max-width: none; padding-top: 28px; border-top: 1px solid var(--ink-line); font-size: 15px; color: var(--ink-dim); }
 
 /* Footer */
 .footer { padding: 40px 0; border-top: 1px solid var(--line); background: var(--bg); }
@@ -345,13 +346,6 @@ h1 em, h2 em {
 .footer nav a:hover { color: var(--ink); }
 .footer p { font-size: 14px; color: var(--faint); }
 
-/* Toast */
-.toast {
-  position: fixed; left: 50%; bottom: 28px; transform: translate(-50%, 20px); z-index: 100;
-  background: var(--ink); color: #fff; font-size: 14.5px; padding: 12px 20px; border-radius: 999px;
-  opacity: 0; pointer-events: none; transition: opacity .3s, transform .3s var(--ease);
-}
-.toast.is-on { opacity: 1; transform: translate(-50%, 0); }
 
 /* Reveal */
 .js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
@@ -395,6 +389,7 @@ h1 em, h2 em {
   .venture { min-height: 0; }
   .venture__tag { margin-bottom: 28px; }
   .about__card { max-width: 420px; }
+  .talk { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 640px) {
@@ -404,8 +399,7 @@ h1 em, h2 em {
   .cards .card, .cards .card--wide, .cards .card:last-child { grid-column: auto; }
   .work__item { grid-template-columns: 1fr; gap: 14px; padding: 28px 0; }
   .work__item .tags { grid-column: auto; margin-top: 4px; }
-  .hero__actions .btn, .cta__actions .btn { width: 100%; }
-  .cta__details { grid-template-columns: 1fr; gap: 28px; }
+  .hero__actions .btn { width: 100%; }
   .run { padding: 18px; }
   .run__name { display: none; }
   .footer__inner { flex-direction: column; align-items: flex-start; }

@@ -81,39 +81,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // Email addresses are assembled here (stored as "user|domain") to keep them away from scrapers
-  function address(value) { const p = value.split('|'); return p[0] + '@' + p[1]; }
-
-  document.querySelectorAll('[data-mail]').forEach(function (el) {
-    const email = address(el.getAttribute('data-mail'));
-    const subject = el.getAttribute('data-subject');
-    el.href = 'mailto:' + email + (subject ? '?subject=' + encodeURIComponent(subject) : '');
-    if (el.hasAttribute('data-show')) el.textContent = email;
-  });
-
-  const toast = document.querySelector('.toast');
-  let toastTimer;
-  function showToast(msg) {
-    toast.textContent = msg;
-    toast.classList.add('is-on');
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(function () { toast.classList.remove('is-on'); }, 2200);
-  }
-
-  document.querySelectorAll('[data-copy]').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      const email = address(btn.getAttribute('data-copy'));
-      if (navigator.clipboard && window.isSecureContext) {
-        navigator.clipboard.writeText(email).then(
-          function () { showToast('Copied ' + email); },
-          function () { showToast(email); }
-        );
-      } else {
-        showToast(email);
-      }
-    });
-  });
-
   // Footer year
   document.querySelectorAll('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
 });
