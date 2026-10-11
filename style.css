@@ -337,6 +337,14 @@ h1 em, h2 em {
 .talk span { display: block; font-family: var(--serif); font-style: italic; font-size: 30px; line-height: 1; color: var(--accent-2); margin-bottom: 20px; }
 .talk h3 { font-size: 18px; margin-bottom: 8px; }
 .talk p { color: var(--ink-dim); font-size: 15px; }
+.founder { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; padding: 22px 24px; margin-bottom: 32px; border-radius: var(--r-md); background: rgba(91, 75, 255, .1); border: 1px solid rgba(138, 125, 255, .3); }
+.founder__who { display: flex; align-items: center; gap: 16px; }
+.founder__avatar { width: 52px; height: 52px; border-radius: 16px; display: grid; place-items: center; background: linear-gradient(140deg, var(--accent), #2A1FB8); color: #fff; font-family: var(--serif); font-style: italic; font-size: 24px; }
+.founder strong { display: block; font-size: 18px; font-weight: 600; letter-spacing: -0.02em; }
+.founder__who span { font-size: 14.5px; color: var(--ink-dim); }
+.founder .btn svg, .about__link svg { width: 17px; height: 17px; fill: currentColor; }
+.about__link { display: inline-flex; align-items: center; gap: 8px; margin-top: 18px; font-size: 14.5px; font-weight: 500; color: var(--accent); }
+.about__link:hover { color: var(--ink); }
 .cta__box > .cta__where { max-width: none; padding-top: 28px; border-top: 1px solid var(--ink-line); font-size: 15px; color: var(--ink-dim); }
 
 /* Footer */
@@ -399,7 +407,7 @@ h1 em, h2 em {
   .cards .card, .cards .card--wide, .cards .card:last-child { grid-column: auto; }
   .work__item { grid-template-columns: 1fr; gap: 14px; padding: 28px 0; }
   .work__item .tags { grid-column: auto; margin-top: 4px; }
-  .hero__actions .btn { width: 100%; }
+  .hero__actions .btn, .founder .btn { width: 100%; }
   .run { padding: 18px; }
   .run__name { display: none; }
   .footer__inner { flex-direction: column; align-items: flex-start; }
